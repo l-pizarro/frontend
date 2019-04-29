@@ -1,54 +1,27 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-    <div class="container">
-      <div class="row">
-        <div class="col-6">
-          <Actors :actors="actorsFromDB"/>
-        </div>
-        <div class="col-6">
-        </div>
-      </div>
-    </div>
+    <Nav/>
+    <Menu/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import Actors from './components/Actors.vue'
-import axios from 'axios'
+import Nav from './components/Nav.vue'
+import Menu from './components/Menu.vue'
 
 export default {
   name: 'app',
 
   components: {
-    Actors,
-    HelloWorld
+    Nav,
+    Menu
   },
 
   data() {
     return {
-      actorsFromDB: []
+
     }
-  },
-
-  created() {
-     axios.get('http://localhost:8081/actors')
-        .then( (response) => {
-            this.actorsFromDB = response.data;
-            }
-            );
-  },
-
-  mounted() {
-    axios.get('http://localhost:8081/actors')
-        .then( (response) => {
-            this.actorsFromDB = response.data;
-            }
-            );
   }
-
 }
 </script>
 
@@ -59,6 +32,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
