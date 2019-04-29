@@ -1,5 +1,6 @@
 <template>
 <div class="actors">
+    <button class="btn btn-primary">Update Actors</button>
     {{ actors }}
 </div>
 </template>
@@ -24,6 +25,16 @@ export default {
 
     creted() {
         console.log("Component created")
+    },
+
+    methods: {
+        updateActors() {
+            axios.get('http://localhost:8081/actors')
+        .then( (response) => {
+            this.actors = response.data;
+            }
+            );
+        }
     }
     
 }

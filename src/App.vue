@@ -34,7 +34,7 @@ export default {
   },
 
   created() {
-     axios.get('/http://localhost:8081/actors')
+     axios.get('http://localhost:8081/actors')
         .then( (response) => {
             this.actorsFromDB = response.data;
             }
@@ -42,7 +42,7 @@ export default {
   },
 
   mounted() {
-    axios.get('/http://localhost:8081/actors')
+    axios.get('http://localhost:8081/actors')
         .then( (response) => {
             this.actorsFromDB = response.data;
             }
