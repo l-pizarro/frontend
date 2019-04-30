@@ -50,6 +50,7 @@ export default {
     data() {
         return {
             myActors: [],
+            loading: true,
             search: ''
         }
     },
