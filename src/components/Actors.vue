@@ -15,16 +15,19 @@
                 </el-table-column>
 
                 <el-table-column
-                align="right">
+                align="left">
                     <template slot="header" slot-scope="scope">
                         <el-input
+                        class="nonepadding"
                         v-model="search"
-                        size="mini"
+                        size="medium"
                         placeholder="Type to search by name"/>
                     </template>
                     <template slot-scope="scope">
                         <el-button
-                        size="mini">See Films</el-button>
+                        size="mini"
+                        type="primary"
+                        plain>See Films</el-button>
                         <el-button
                         size="mini"
                         type="danger"
@@ -63,5 +66,8 @@ export default {
 .actors {
     margin-left: 2em;
     margin-right: 2em;
+}
+.nonepadding {
+    padding: 0px !important;
 }
 </style>

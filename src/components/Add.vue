@@ -49,9 +49,19 @@ export default {
                 config: {
                     headers: {'Content-Type': 'application/json' }}
                 })
-                .then(function (response) {
-                    console.log(response);
-                });
+                .then(
+                    (response) => this.$notify({
+                        title: 'Success',
+                        message: 'The actor was added',
+                        type: 'success'
+                        })
+                )
+                .catch(
+                    (error) => this.$notify.error({
+                        title: 'Error',
+                        message: 'There was an error: ' + error.message
+                    })
+                );
         }
     }
 }
@@ -61,5 +71,9 @@ export default {
 .add {
     margin-left: 2em;
     margin-right: 2em;
+}
+
+.el-notification, .right{
+    font-family: 'Avenir', Helvetica, Arial, sans-serif !important;
 }
 </style>

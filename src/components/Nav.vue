@@ -10,22 +10,8 @@ export default {
 
     data() {
         return {
-
-        }
-    },
-
-    munted() {
-        console.log("Component mounted");
-    },
-
-    creted() {
-        console.log("Component created")
-    },
-
-    methods: {
-        updateActors() {
+            
         }
     }
-    
 }
 </script>
