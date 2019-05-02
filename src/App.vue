@@ -6,11 +6,11 @@
 </template>
 
 <script>
-import Nav from './components/Nav.vue'
-import Menu from './components/Menu.vue'
+import Nav from "./components/Nav.vue";
+import Menu from "./components/Menu.vue";
 
 export default {
-  name: 'app',
+  name: "app",
 
   components: {
     Nav,
@@ -18,16 +18,14 @@ export default {
   },
 
   data() {
-    return {
-
-    }
+    return {};
   }
-}
+};
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

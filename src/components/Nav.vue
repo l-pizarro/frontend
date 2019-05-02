@@ -1,17 +1,15 @@
 <template>
-    <el-menu class="el-menu-demo" mode="horizontal">
-        <el-menu-item index="1"> Actors </el-menu-item>
-    </el-menu>
+  <el-menu class="el-menu-demo" mode="horizontal">
+    <el-menu-item index="1">Actors</el-menu-item>
+  </el-menu>
 </template>
 
 <script>
 export default {
-    name: 'Nav',
+  name: "Nav",
 
-    data() {
-        return {
-            
-        }
-    }
-}
+  data() {
+    return {};
+  }
+};
 </script>
