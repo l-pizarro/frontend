@@ -1,13 +1,26 @@
 pipeline {
-    agent any tools {
-        nodejs "node"
+  agent any
+    
+  tools {nodejs "node"}
+    
+  stages {
+        
+    stage('Cloning Git') {
+      steps {
+         git 'https://github.com/l-pizarro/frontend'
+      }
     }
-
-    stages {
-        stage('Clone') {
-            steps {
-                git 'https://github.com/l-pizarro/frontend'
-            }
-        }
+        
+    stage('Install dependencies') {
+      steps {
+        sh 'npm install'
+      }
     }
+     
+    stage('Test') {
+      steps {
+         sh 'npm test'
+      }
+    }      
+  }
 }
