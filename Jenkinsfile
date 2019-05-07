@@ -1,5 +1,9 @@
 node {
     stage('SCM Checkout') {
+        withNPM {
+            // some block
+        }
+        
         git 'https://github.com/l-pizarro/frontend'
     }
     stage('Compile ') {
