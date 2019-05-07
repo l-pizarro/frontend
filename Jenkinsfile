@@ -1,12 +1,13 @@
-node {
-    stage('SCM Checkout') {
-        withNPM {
-            // some block
-        }
-        
-        git 'https://github.com/l-pizarro/frontend'
+pipeline {
+    agent any tools {
+        nodejs "node"
     }
-    stage('Compile ') {
-        sh 'npm run build'
+
+    stages {
+        stage('Clone') {
+            steps {
+                git 'https://github.com/l-pizarro/frontend'
+            }
+        }
     }
 }
